@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_mess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingHorizontal="@dimen/size_18"
+        android:paddingVertical="@dimen/size_12">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circle_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:id="@+id/message_icon"
+                android:layout_width="@dimen/size_64"
+                android:layout_height="@dimen/size_64"
+                android:src="@drawable/user_icon"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="123344"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18"
+            android:layout_marginStart="@dimen/size_16"
+            app:layout_constraintTop_toTopOf="@id/circle_card_view"
+            app:layout_constraintStart_toEndOf="@id/circle_card_view" />
+
+        <TextView
+            android:id="@+id/message_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/size_16"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textSize="@dimen/textSize_14"
+            android:text="Yes, 2 p.m is awesome"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/circle_card_view"
+            app:layout_constraintStart_toEndOf="@id/circle_card_view"
+            app:layout_constraintTop_toBottomOf="@id/contact_name" />
+
+        <TextView
+            android:id="@+id/message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textSize="@dimen/textSize_15"
+            android:gravity="bottom"
+            android:text="9.30h"
+            app:layout_constraintStart_toEndOf="@id/message_content"
+            app:layout_constraintTop_toTopOf="@id/message_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

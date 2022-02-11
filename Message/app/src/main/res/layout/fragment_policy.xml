@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/url_text"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:textSize="16sp"
+                android:text="https://www.google.com.vn/?gws_rd=ssl"/>
+
+            <ImageButton
+                android:id="@+id/exit_web_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel_button_ic"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/white"/>
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</layout>

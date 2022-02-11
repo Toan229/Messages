@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageButton
+            android:id="@+id/wallpaper_backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/appbar_size"
+            android:backgroundTint="@color/white"
+            android:minWidth="32dp"
+            android:src="@drawable/back_btn_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/appbar_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/chat_wallpaper"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/wallpaper_backbtn"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:textSize="@dimen/title_size" />
+
+        <TextView
+            android:id="@+id/text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/wallpaper_backbtn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/color"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textSize="@dimen/textSize_13"
+            android:layout_marginTop="12dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/color_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:divider="@null"
+            android:transcriptMode="alwaysScroll"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_color"
+            android:clipToPadding="false"
+            android:layout_marginTop="17dp"/>
+
+        <TextView
+            android:id="@+id/text_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/color_recycler_view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/wallpaper"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textSize="@dimen/textSize_13"
+            android:layout_marginTop="32dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/image_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_image"
+            app:spanCount="2"
+            android:layout_marginStart="@dimen/size_14"
+            android:layout_marginEnd="@dimen/size_14"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="?android:attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/font_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/font_selected"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="SF Pro Text"
+            android:gravity="left|center_vertical"
+            android:textSize="@dimen/textSize_15"
+            android:paddingStart="24dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/disableButton"
+            android:layout_height="@dimen/size_0_5"
+            app:layout_constraintTop_toBottomOf="@id/font_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="24dp"/>
+
+        <ImageView
+            android:id="@+id/font_selected"
+            android:layout_width="@dimen/size_22"
+            android:layout_height="@dimen/size_22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/selected"
+            android:layout_marginEnd="18dp"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

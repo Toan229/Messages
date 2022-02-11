@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exit_fragment"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/textSize_17"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/done"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:enabled="false"
+                android:fontFamily="@font/sf_pro_text_semibold"
+                android:textSize="@dimen/textSize_17"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:textColor="@color/disableButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/circle_card_view"
+                android:layout_width="@dimen/size_136"
+                android:layout_height="@dimen/size_136"
+                app:layout_constraintTop_toBottomOf="@id/done"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/size_90">
+
+                <ImageView
+                    android:id="@+id/user_ic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/user_icon"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_image_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:text="@string/add_image"
+                android:textSize="@dimen/textSize_15"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/circle_card_view" />
+
+            <View
+                android:id="@+id/line1"
+                app:layout_constraintTop_toBottomOf="@id/add_image_btn"
+                android:layout_width="match_parent"
+                android:background="@color/disableButton"
+                android:layout_height="@dimen/size_0_5" />
+
+            <EditText
+                android:id="@+id/contact_name_txt"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="#00000000"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/textSize_16"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/size_8"
+                app:layout_constraintEnd_toStartOf="@id/cancel_edit_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1" />
+
+            <ImageButton
+                android:id="@+id/cancel_edit_name"
+                android:layout_width="@dimen/size_22"
+                android:layout_height="@dimen/size_22"
+                android:layout_marginEnd="@dimen/size_18"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/cancel_button_ic"
+                app:layout_constraintBottom_toBottomOf="@id/contact_name_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/contact_name_txt"
+                app:layout_constraintTop_toTopOf="@id/contact_name_txt"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/line2"
+                app:layout_constraintTop_toBottomOf="@id/contact_name_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:background="@color/disableButton"
+                android:layout_height="@dimen/size_0_5"/>
+
+
+            <EditText
+                android:id="@+id/contact_number_txt"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="#00000000"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/textSize_16"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/size_8"
+                app:layout_constraintEnd_toStartOf="@id/cancel_edit_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:inputType="number"/>
+
+            <ImageButton
+                android:id="@+id/cancel_edit_number"
+                app:layout_constraintTop_toTopOf="@id/contact_number_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/contact_number_txt"
+                android:layout_width="@dimen/size_22"
+                android:layout_height="@dimen/size_22"
+                android:layout_marginEnd="@dimen/size_18"
+                android:src="@drawable/cancel_button_ic"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/line3"
+                app:layout_constraintTop_toBottomOf="@id/contact_number_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:background="@color/disableButton"
+                android:layout_height="@dimen/size_0_5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

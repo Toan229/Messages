@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Message</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="web_view_url">https://www.google.com.vn/?gws_rd=ssl</string>
+
+    <string name="messages">Messages</string>
+    <string name="contacts">Contacts</string>
+    <string name="color">COLOR</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="message">Message</string>
+    <string name="test_message">In above code i create a custom ArrayAdapter through this set data in my custom layout and also load specific layout.</string>
+    <string name="wallpaper">WALLPAPER</string>
+    <string name="details">Details</string>
+
+    <string name="saveError">Cannot save the change</string>
+    <string name="requirePermission">The app need this permissions to work property</string>
+    <string name="goSetting">Go to setting</string>
+    <string name="goBack">Go back</string>
+    <string name="sendMessagePermissionError">Cannot send the message without SEND_SMS permission</string>
+    <string name="readContactError">Cannot read contacts from device.</string>
+    <string name="invalidAddress">Invalid address</string>
+    <string name="settings">Settings</string>
+    <string name="rate_now">RATE NOW</string>
+    <string name="chat_wallpaper">Chat Wallpaper</string>
+    <string name="font">Font</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="rate_app">Rate App</string>
+    <string name="feedback">Feedback</string>
+    <string name="done">Done</string>
+    <string name="add_image">Add image</string>
+    <string name="to">To :</string>
+</resources>

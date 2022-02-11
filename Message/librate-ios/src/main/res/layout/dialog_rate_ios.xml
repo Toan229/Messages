@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:background="@drawable/custom_background_dialog_rate"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_name_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:text="@string/do_you_like"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+
+    <company.librate.view.RotationRatingBar
+        android:id="@+id/simpleRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="34dp"
+        rb:clearRatingEnabled="true"
+        rb:starPadding="16"
+        rb:touchable="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_rate"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ripple_bg"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/ic_feedback_icon"/>
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#ffff"
+            android:text="@string/FeedBack"
+            />
+    </LinearLayout>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:gravity="center|right"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_not_now"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Later"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#ff2d54"-->
+<!--            android:textSize="@dimen/_13sdp" />-->
+
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="#d8d8d8" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_ok"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="8dp"-->
+<!--            android:text="Rate now"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#ff2d54"-->
+<!--            android:textSize="@dimen/_14sdp" />-->
+
+<!--    </LinearLayout>-->
+</LinearLayout>

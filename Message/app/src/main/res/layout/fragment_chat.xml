@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/back_btn_ic"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/sf_pro_text_medium"
+            android:padding="10dp"
+            android:text="@string/messages"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/textSize_17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circle_card_view"
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardCornerRadius="@dimen/size_18"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/circle_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/test_image2"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView >
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_text_medium"
+            android:textSize="@dimen/textSize_16"
+            android:text="Dianne Russell"
+            app:layout_constraintEnd_toEndOf="@id/circle_card_view"
+            app:layout_constraintStart_toStartOf="@id/circle_card_view"
+            app:layout_constraintTop_toBottomOf="@id/circle_card_view" />
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:divider="@null"
+            android:clipToPadding="false"
+            android:stackFromBottom="true"
+            android:transcriptMode="normal"
+            app:layout_constraintBottom_toTopOf="@id/message_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_name" />
+
+        <EditText
+            android:id="@+id/message_body"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_32"
+            android:layout_weight="1"
+            android:background="@drawable/round_box"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:hint="@string/message"
+            android:maxLines="3"
+            android:minHeight="48dp"
+            android:paddingHorizontal="@dimen/size_16"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/textSize_17"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/send_message_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/list_view"
+            android:layout_marginTop="@dimen/size_8"
+            android:layout_marginStart="@dimen/size_16"
+            android:layout_marginEnd="@dimen/size_14"
+            android:layout_marginVertical="@dimen/size_8"/>
+
+        <ImageButton
+            android:id="@+id/send_message_button"
+            android:layout_width="@dimen/size_22"
+            android:layout_height="@dimen/size_22"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/send_btn_ic"
+            app:layout_constraintTop_toTopOf="@id/message_body"
+            app:layout_constraintBottom_toBottomOf="@id/message_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/message_body"
+            android:layout_marginEnd="@dimen/size_18"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
